@@ -1,0 +1,257 @@
+.registration-page {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  background:
+    radial-gradient(ellipse at 85% 10%, rgba(99, 102, 241, 0.12), transparent 34%),
+    #f5f6fb;
+  color: #20243a;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.registration-page *,
+.registration-page *::before,
+.registration-page *::after {
+  box-sizing: border-box;
+}
+
+.registration-card {
+  display: flex;
+  width: min(100%, 960px);
+  overflow: hidden;
+  border: 1px solid #e8eaf2;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(38, 43, 75, 0.11);
+}
+
+.register {
+  flex: 1 1 65%;
+  min-width: 0;
+  padding: 52px 56px;
+}
+
+.form-heading {
+  margin-bottom: 32px;
+}
+
+.form-eyebrow,
+.progress-eyebrow {
+  color: #6366d9;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+.form-heading h1 {
+  margin: 12px 0 8px;
+  color: #20243a;
+  font-size: clamp(1.8rem, 4vw, 2.35rem);
+  font-weight: 730;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.form-heading p,
+.completion > p {
+  margin: 0;
+  color: #777d91;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 16px;
+}
+
+.form-field {
+  display: flex;
+  flex: 1 1 calc(50% - 16px);
+  min-width: 190px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: #363b51;
+  font-size: 0.83rem;
+  font-weight: 650;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid #e2e5ee;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #252a40;
+  font: inherit;
+  font-size: 0.88rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-field input::placeholder {
+  color: #a3a8b7;
+}
+
+.form-field input:focus {
+  border-color: #7779e7;
+  box-shadow: 0 0 0 3px rgba(99, 102, 217, 0.13);
+}
+
+.register-button {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 9px;
+  background: #5b5ed6;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 650;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.register-button:hover {
+  transform: translateY(-1px);
+  background: #4b4ec5;
+}
+
+.register-button:focus-visible {
+  outline: 3px solid #b9baff;
+  outline-offset: 3px;
+}
+
+.register-button span {
+  font-size: 1.15rem;
+}
+
+.completion {
+  display: flex;
+  flex: 0 0 290px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px 32px;
+  background: #f2f3ff;
+}
+
+.progress-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 30px;
+  place-items: center;
+  border-radius: 13px;
+  background: #e2e3ff;
+  color: #5558ca;
+  font-size: 1.15rem;
+  font-weight: 750;
+}
+
+.completion h2 {
+  margin: 10px 0 8px;
+  color: #252943;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.completion > p {
+  margin-bottom: 32px;
+  font-size: 0.88rem;
+}
+
+.progress-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555b70;
+  font-size: 0.82rem;
+}
+
+.progress-copy strong {
+  color: #4f52c5;
+  font-size: 0.85rem;
+}
+
+.registration-progress {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: #dedff5;
+}
+
+.registration-progress::-webkit-progress-bar {
+  border-radius: 999px;
+  background: #dedff5;
+}
+
+.registration-progress::-webkit-progress-value {
+  border-radius: 999px;
+  background: #6265dc;
+}
+
+.registration-progress::-moz-progress-bar {
+  border-radius: 999px;
+  background: #6265dc;
+}
+
+.progress-footnote {
+  margin-top: 12px;
+  color: #81869a;
+  font-size: 0.77rem;
+}
+
+@media (max-width: 720px) {
+  .registration-page {
+    padding: 24px 16px;
+  }
+
+  .registration-card {
+    flex-direction: column;
+  }
+
+  .register {
+    padding: 36px 28px;
+  }
+
+  .completion {
+    flex-basis: auto;
+    padding: 28px;
+  }
+
+  .progress-icon {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .register {
+    padding: 32px 22px;
+  }
+
+  .form-field {
+    flex-basis: 100%;
+  }
+}
