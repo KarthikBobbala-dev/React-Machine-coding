@@ -6,6 +6,7 @@ import './App.css'
 import { Counter } from './Counter/Counter'
 import Input from './InputSearch/Input'
 import UserRegister from './FormProgress/UserRegister'
+import Todos from './TodoList/Todos'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,7 +15,8 @@ function App() {
     <>
      {/* <Counter/> */}
      {/* <Input/> */}
-     <UserRegister/>
+     {/* <UserRegister/> */}
+     <Todos/>
     </>
   )
 }
